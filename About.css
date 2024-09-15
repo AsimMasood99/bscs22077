@@ -16,10 +16,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   padding: 2rem 4rem 2rem 4rem;
   font-size: 1.3rem;
-
 }
 
 #nav-left {
@@ -46,6 +44,8 @@ main {
 
 .menuItems {
   list-style: none;
+  font-size: 1.6rem;
+  font-weight: 450;
   
 }
 
@@ -54,7 +54,35 @@ main {
 }
 
 main {
-  margin: 6rem 11rem 0 11rem;
+  margin: 1rem 11rem 0 11rem;
+  height: 35rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+
+.text-yellow {
+  color: rgb(250 204 21)
+}
+
+.edu-card {
+  padding: 10px;
+  margin: 15px 0 15px;
+  border: white solid 2px;
+  border-radius: 10px;
+}
+
+.info {
+  width: 50%;
+}
+
+.edu-heading {
+  font-size: 1.6rem;
+  font-weight: 450;
+}
+
+.Skills {
+  height: 35rem;
+  overflow-y: scroll;
 }
