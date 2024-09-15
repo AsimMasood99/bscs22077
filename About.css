@@ -82,7 +82,7 @@ main {
   font-weight: 450;
 }
 
-.Skills {
+.Skills, .Education {
   height: 35rem;
   overflow-y: scroll;
 }
@@ -122,12 +122,24 @@ main {
     padding: 0.5rem 0;
   }
   main {
-    margin: 1rem 2rem 0 2rem;
-    height: 35rem;
+    font-size: large;
+    margin: 1rem 0.5rem 0 0.5rem;
+    height: 45rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   
+  .Skills, .Education {
+    height: 45rem;
+    overflow-y: scroll;
+  }
 
+  .menuItems {
+    list-style: none;
+    font-size: 1.3rem;
+    font-weight: 450;
+    
+  }
+  
 }
