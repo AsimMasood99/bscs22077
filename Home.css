@@ -2,10 +2,10 @@
 /* Importing Roboto Mono Font style from google fonts */
 
 .text-yellow {
-  color: rgb(250 204 21)
+  color: rgb(250 204 21);
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
   background: #1e1e1e;
@@ -20,10 +20,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  padding: 2rem 4rem 2rem 4rem;
+  padding: 2rem 4rem;
   font-size: 1.3rem;
-
 }
 
 #nav-left {
@@ -33,7 +31,7 @@ nav {
 #nav-right {
   font-size: 1.25rem;
   display: flex;
-  gap:1.5rem;
+  gap: 1.5rem;
 }
 
 .nav-links {
@@ -41,7 +39,7 @@ nav {
 }
 
 .nav-links a {
-  all:unset;
+  all: unset;
 }
 
 main {
@@ -73,4 +71,57 @@ main {
   width: 22rem;
   background-color: #817c7c;
   border-radius: 100%;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  main {
+    margin: 4rem 6rem;
+  }
+
+  #info {
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 1rem 2rem;
+  }
+
+  #nav-left {
+    font-size: 1.8rem;
+  }
+
+  #nav-right {
+    font-size: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  main {
+    flex-direction: column;
+    margin: 4rem 2rem;
+  }
+
+  #info {
+    width: 100%;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .name {
+    font-size: 2.5rem;
+  }
+
+  #info-dev {
+    font-size: 1.5rem;
+  }
+
+  #profile-pic {
+    height: 18rem;
+    width: 18rem;
+    margin: 2rem 0;
+  }
 }
