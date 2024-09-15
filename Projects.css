@@ -57,3 +57,52 @@ main {
   border: white solid 2px;
   border-radius: 10px;
 }
+
+.video-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#menu-btn {
+  display: none;
+}
+
+@media (max-width: 746px){
+  #menu-btn {
+    display: block;
+  }
+
+  #nav-right {
+    display: none;
+    position: absolute;
+    left: 69%;
+    top:10%;
+    background-color: #333;
+    padding: 1rem;
+    flex-direction: column;
+    width: 150px;
+    border-radius: 5px;
+  }
+  
+  #nav-right.show{
+    display: flex;
+  }
+
+  .nav-links {
+    padding: 0.5rem 0;
+  }
+
+  main {
+    font-size: 0.8rem;
+    margin: 2rem 4rem 0 4rem;
+  }
+  .video-container{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  video {
+    width: 100vw;
+  }
+}

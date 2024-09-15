@@ -42,6 +42,15 @@ nav {
   all: unset;
 }
 
+#menu-btn {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
 main {
   display: flex;
   margin: 6rem 11rem 0 11rem;
@@ -64,6 +73,7 @@ main {
 .name {
   font-size: 3.5rem;
   font-weight: bold;
+  margin: 0;
 }
 
 #profile-pic {
@@ -73,42 +83,56 @@ main {
   border-radius: 100%;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 1200px) {
-  main {
-    margin: 4rem 6rem;
-  }
-
-  #info {
-    gap: 4rem;
-  }
-}
 
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    padding: 1rem 2rem;
-  }
-
-  #nav-left {
-    font-size: 1.8rem;
+  /* Navigation dropdown */
+  #menu-btn {
+    display: block;
   }
 
   #nav-right {
-    font-size: 1rem;
+    display: none;
+    position: absolute;
+    left: 69%;
+    top:10%;
+    background-color: #333;
+    padding: 1rem;
     flex-direction: column;
-    gap: 0.5rem;
+    width: 150px;
+    border-radius: 5px;
+  }
+  
+  #nav-right.show{
+    display: flex;
+  }
+
+  .nav-links {
+    padding: 0.5rem 0;
+  }
+
+  /* Adjust profile section layout */
+  #profile-info {
+    flex-direction: column;
+    align-items: center;
   }
 
   main {
+    margin: 2rem 1rem;
+    display: flex;
     flex-direction: column;
-    margin: 4rem 2rem;
+    align-items: center;
   }
 
   #info {
-    width: 100%;
     text-align: center;
-    gap: 2rem;
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  #profile-pic {
+    margin-top: 2rem;
+    height: 18rem;
+    width: 18rem;
   }
 
   .name {
@@ -117,11 +141,5 @@ main {
 
   #info-dev {
     font-size: 1.5rem;
-  }
-
-  #profile-pic {
-    height: 18rem;
-    width: 18rem;
-    margin: 2rem 0;
   }
 }

@@ -86,3 +86,48 @@ main {
   height: 35rem;
   overflow-y: scroll;
 }
+
+#menu-btn {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: block;
+  }
+
+  #nav-right {
+    display: none;
+    position: absolute;
+    left: 69%;
+    top:10%;
+    background-color: #333;
+    padding: 1rem;
+    flex-direction: column;
+    width: 150px;
+    border-radius: 5px;
+  }
+  
+  #nav-right.show{
+    display: flex;
+  }
+
+  .nav-links {
+    padding: 0.5rem 0;
+  }
+  main {
+    margin: 1rem 2rem 0 2rem;
+    height: 35rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+
+}

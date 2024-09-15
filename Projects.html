@@ -13,6 +13,7 @@
     <div id="nav-left">
       &lt;Asim/&gt;
     </div>
+    <button id="menu-btn">&#9776;</button>
     <div id="nav-right">
       <div class="nav-links"><a href="Home.html">Home</a></div>
       <div class="nav-links"><a href="About.html">About</a></div>
@@ -127,7 +128,21 @@
         Aug-2024
       </div>
     </div>
+    <div class="heading">
+      FoodHub App Demo
+    </div>
+    <div class="video-container">
+      <video src="public/foodhub.mp4" controls></video>
+    </div>
   </main>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const navLinksContainer = document.getElementById('nav-right');
+
+    menuBtn.addEventListener('click', () => {
+      navLinksContainer.classList.toggle('show');
+    });
+  </script>
 </body>
 
 </html>

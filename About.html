@@ -14,6 +14,7 @@
     <div id="nav-left">
       &lt;Asim/&gt;
     </div>
+    <button id="menu-btn">&#9776;</button>
     <div id="nav-right">
       <div class="nav-links"><a href="Home.html">Home</a></div>
       <div class="nav-links"><a href="About.html">About</a></div>
@@ -140,6 +141,14 @@
       </div>
     </div>
   </main>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const navLinksContainer = document.getElementById('nav-right');
+
+    menuBtn.addEventListener('click', () => {
+      navLinksContainer.classList.toggle('show');
+    });
+  </script>
 </body>
 
 </html>
