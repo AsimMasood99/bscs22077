@@ -39,3 +39,22 @@ nav {
 .nav-links a {
   all:unset;
 }
+
+main {
+  font-size: 1.3rem;
+}
+
+.menuItems {
+  list-style: none;
+  
+}
+
+.hidden {
+  display: none;
+}
+
+main {
+  margin: 6rem 11rem 0 11rem;
+  display: flex;
+  justify-content: space-between;
+}
