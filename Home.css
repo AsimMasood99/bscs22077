@@ -40,6 +40,10 @@ nav {
   cursor: pointer;
 }
 
+.nav-links a {
+  all:unset;
+}
+
 main {
   display: flex;
   margin: 6rem 11rem 0 11rem;
