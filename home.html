@@ -9,6 +9,7 @@
     content="Asim portfolio, full stack developer, React developer, MERN stack, web developer, MongoDB, Express, JavaScript projects">
   <!-- Key words for SEO  -->
   <meta name="description" content="Asim's portfolio made to show the education, skills and projects">
+  <script src="./Home.js" defer></script>
   <title>Asim's Profile</title>
 </head>
 
@@ -55,23 +56,7 @@
 
 
   </main>
-  <script>
 
-    // Data population 
-    const myInfo = {
-      info: "I am a full-stack web developer and a Computer Science student. I love solving problems and building cool web apps.I'm always expsloring new technologies to help me enhance my skills."
-    }
-
-    const descp = document.getElementById("discrip");
-    descp.innerText = myInfo.info;
-    //
-    const menuBtn = document.getElementById('menu-btn');
-    const navLinksContainer = document.getElementById('nav-right');
-
-    menuBtn.addEventListener('click', () => {
-      navLinksContainer.classList.toggle('show');
-    });
-  </script>
 </body>
 
 </html>
