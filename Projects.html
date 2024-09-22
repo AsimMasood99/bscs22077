@@ -23,125 +23,76 @@
   </nav>
 
   <main>
-    <div class="heading">
-      University Projects
-    </div>
-    <div class="card">
-      <div>
-        Snake Game
-      </div>
-      <div>
-        Technologies used: C++
-      </div>
-      <div>
-        Sept-2022
-      </div>
-    </div>
-    <div class="card">
-      <div>
-        Bead 12
-      </div>
-      <div>
-        Technologies used: C++/SFML
-      </div>
-      <div>
-        Dec-2022
-      </div>
-    </div>
-    <div class="card">
-      <div>
-        Chess
-      </div>
-      <div>
-        Technologies used: C++/SFML
-      </div>
-      <div>
-        Feb-2023
-      </div>
-    </div>
-    <div class="card">
-      <div>
-        Ludo
-      </div>
-      <div>
-        Technologies used: C++/SFML
-      </div>
-      <div>
-        March-2023
-      </div>
-    </div>
-    <div class="card">
-      <div>
-        Shogi
-      </div>
-      <div>
-        Technologies used: C++/SFML
-      </div>
-      <div>
-        Aug-2023
-      </div>
-    </div>
-    <div class="card">
-      <div>
-        Solitaire
-      </div>
-      <div>
-        Technologies used: C++/SFML
-      </div>
-      <div>
-        Sept-2023
-      </div>
-    </div>
-    <div class="card">
-      <div>
-        Text Editor
-      </div>
-      <div>
-        Technologies used: C++
-      </div>
-      <div>
-        Nov-2023
-      </div>
-    </div>
-    <div class="card">
-      <div>
-        Mini Search Engine
-      </div>
-      <div>
-        Technologies used: C++
-      </div>
-      <div>
-        Nov-2023
-      </div>
-    </div>
-    <div class="heading">
-      Personal Projects
-    </div>
-    <div class="card">
-      <div>
-        FoodHub
-      </div>
-      <div>
-        Technologies used: MERN Stack
-      </div>
-      <div>
-        Aug-2024
-      </div>
-    </div>
-    <div class="heading">
-      FoodHub App Demo
-    </div>
   </main>
   <div class="video-container">
     <video src="public/foodhub.mp4" controls></video>
   </div>
-  <div class="center mt">
-    النجاح رحلة، ليست وجهة
+  <div class="arabic center mt">
   </div>
-  <div class="center">
-    Success is a journey, not a destination.
+  <div class="english center">
   </div>
+
+
   <script>
+
+    const content = {
+      universityProjects: [
+        { name: "Snake Game", technologies: "C++", date: "Sept-2022" },
+        { name: "Bead 12", technologies: "C++/SFML", date: "Dec-2022" },
+        { name: "Chess", technologies: "C++/SFML", date: "Feb-2023" },
+        { name: "Ludo", technologies: "C++/SFML", date: "March-2023" },
+        { name: "Shogi", technologies: "C++/SFML", date: "Aug-2023" },
+        { name: "Solitaire", technologies: "C++/SFML", date: "Sept-2023" },
+        { name: "Text Editor", technologies: "C++", date: "Nov-2023" },
+        { name: "Mini Search Engine", technologies: "C++", date: "Nov-2023" }
+      ],
+      personalProjects: [
+        { name: "FoodHub", technologies: "MERN Stack", date: "Aug-2024" }
+      ],
+      arabicQuote: "النجاح رحلة، ليست وجهة",
+      englishQuote: "Success is a journey, not a destination."
+    };
+
+
+
+    const mainElement = document.querySelector('main');
+    const universityHeading = document.createElement('div');
+    universityHeading.classList.add('heading');
+    universityHeading.innerText = 'University Projects';
+    mainElement.appendChild(universityHeading);
+
+    content.universityProjects.forEach(project => {
+      const cardDiv = document.createElement('div');
+      cardDiv.classList.add('card');
+      cardDiv.innerHTML = `
+      <div>${project.name}</div>
+      <div>Technologies used: ${project.technologies}</div>
+      <div>${project.date}</div>
+    `;
+      mainElement.appendChild(cardDiv);
+    });
+    const personalHeading = document.createElement('div');
+    personalHeading.classList.add('heading');
+    personalHeading.innerText = 'Personal Projects';
+    mainElement.appendChild(personalHeading);
+
+    content.personalProjects.forEach(project => {
+      const cardDiv = document.createElement('div');
+      cardDiv.classList.add('card');
+      cardDiv.innerHTML = `
+      <div>${project.name}</div>
+      <div>Technologies used: ${project.technologies}</div>
+      <div>${project.date}</div>
+    `;
+      mainElement.appendChild(cardDiv);
+    });
+
+    const arabicText = document.querySelector(".arabic");
+    arabicText.innerText = content.arabicQuote;
+
+    const englishText = document.querySelector(".english");
+    englishText.innerText = content.englishQuote;
+
     const menuBtn = document.getElementById('menu-btn');
     const navLinksContainer = document.getElementById('nav-right');
 
